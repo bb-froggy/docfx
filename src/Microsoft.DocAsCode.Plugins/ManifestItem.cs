@@ -47,5 +47,10 @@ namespace Microsoft.DocAsCode.Plugins
         {
             return (ManifestItem)MemberwiseClone();
         }
+
+        public override string ToString()
+        {
+            return $"[{DocumentType}]\r\nSourceRelativePath: {SourceRelativePath}\r\nOutputFiles.Count: {OutputFiles?.Count}";
+        }
     }
 }
